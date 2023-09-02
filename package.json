@@ -1,0 +1,23 @@
+{
+  "name": "header",
+  "version": "1.0.0",
+  "description": "This is header",
+  "main": "App.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "(http://github.com/Prakashreddy000/header-react.git)"
+  },
+  "keywords": [],
+  "author": "Prakash reddy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Prakashreddy000/header-react/issues"
+  },
+  "homepage": "https://github.com/Prakashreddy000/header-react#readme",
+  "devDependencies": {
+    "parcel": "^2.9.3"
+  }
+}
