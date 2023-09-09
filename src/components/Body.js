@@ -1,5 +1,6 @@
 import RestaurentCard from "./RestaurentCard";
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import Shimmer from "./Shimmer";
 
 const Body = () =>{
@@ -64,7 +65,12 @@ const fetchData = async () => {
         <div className="res-container">
             {
                 filteredRestro.map((eachRestro)=>
-                (<RestaurentCard key={eachRestro.info.id} resData={eachRestro}/>))
+                (
+                <Link 
+                key={eachRestro.info.id}
+                to={"/restaurent/" + eachRestro.info.id}><RestaurentCard  resData={eachRestro}/>
+                </Link>
+                ))
             }
         </div>
         
