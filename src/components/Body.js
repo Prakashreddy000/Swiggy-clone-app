@@ -1,4 +1,4 @@
-import RestaurentCard, {withPromotedCard} from "./RestaurentCard";
+import RestaurentCard, {PromotedVegCard} from "./RestaurentCard";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import Shimmer from "./Shimmer";
@@ -12,7 +12,11 @@ const Body = () =>{
 
   const [searchText, setSearchText] = useState();
 
-  const promotedCard = withPromotedCard(RestaurentCard);
+  const VegPromotedCard = PromotedVegCard(RestaurentCard);
+
+  
+
+ 
 
   useEffect(() => 
   {
@@ -82,9 +86,8 @@ if (OnlineStatus === false)
                 <Link 
                 key={eachRestro.info.id}
                 to={"/restaurent/" + eachRestro.info.id}>
-                  {eachRestro.info.promoted ? (
-                    <promotedCard resData={eachRestro}/>) : (<RestaurentCard  resData={eachRestro}/>
-                  )}
+                  {eachRestro.info.veg ? (<VegPromotedCard  resData={eachRestro}/>) : (<RestaurentCard  resData={eachRestro}/>)}
+                 
                   
                 </Link>
                 ))

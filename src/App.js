@@ -3,7 +3,7 @@ import ReactDOM  from "react-dom/client";
 import Header from "./components/Header";
 import Body from "./components/Body";
 import Contact from "./components/Contact";
-
+import Footer from "./components/Footer";
 import Error from "./components/Error";
 import ReadMore from "./components/ReadMore";
 import RestaurentMenu from "./components/RestaurentMenu";
@@ -17,6 +17,7 @@ const AppLayout = ()=>{
         <div className="app">
             <Header/>
             <Outlet/>
+            <Footer/>
         </div>
     );
 }

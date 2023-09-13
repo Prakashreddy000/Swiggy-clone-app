@@ -17,20 +17,17 @@ const RestaurentCard = (props)=> {
                     <h4>{avgRating}⭐</h4>
             </div>
     );
-
-
 };
 
-export const withPromotedCard = (RestaurentCard) =>{
+export const PromotedVegCard = (RestaurentCard) => {
     return(props)=>{
         return(
             <div>
-                <label className="absolute bg-black text-white m-2 p-2 ">promoted</label>
-            <RestaurentCard {...props}/>
+                <label className="absolute bg-black text-white m-2 p-2 rounded-md hover:bg-green-600">Veg</label>
+                <RestaurentCard {...props}/>
             </div>
-        );
+        )
     };
 };
-
 
 export default RestaurentCard;

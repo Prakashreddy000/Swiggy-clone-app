@@ -732,3 +732,12 @@ const resList = [
     ];
     
    export default resList;
+
+
+   //rescardmenu map <ul>
+   //<ul>
+   //{itemCards.map((item)=>
+     //      <li key={item.card.info.id}>{item.card.info.name}</li>
+  // )};
+   
+//</ul>
