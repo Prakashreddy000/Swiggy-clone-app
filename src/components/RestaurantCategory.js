@@ -1,18 +1,17 @@
-import { useState } from "react";
 import ItemList from "./ItemList";
+import { useState } from "react";
 
-const RestaurantCategory =  ({data}) =>{
 
-    const [clickedButton, setClickedButton]=useState(false);
+const RestaurantCategory =  ({data, showItems,setShowIndex}) =>{
+    
 
-    const handleClick = () =>{
-        setClickedButton(!clickedButton);
-    }
+    const handleClick = ()=>{
+        setShowIndex()
+    };
 
-   console.log(data)
     return(
         <div>
-        <div className="mx-auto my-4 w-6/12 p-4 bg-slate-50 shadow-md hover:bg-gray-400">
+        <div className="hover:cursor-pointer mx-auto my-4 w-6/12 p-4 bg-slate-50 shadow-md hover:bg-green-300" >
            <div 
            onClick={handleClick}
            className=" flex justify-between ">
@@ -20,9 +19,8 @@ const RestaurantCategory =  ({data}) =>{
             <span>⬇️</span>
             </div>
             
-            {clickedButton && <ItemList items={data.itemCards}/>}
+             {showItems && <ItemList items={data.itemCards}/>}
            </div>
-           
         </div>
     );
 };
