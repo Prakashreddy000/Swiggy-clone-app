@@ -1,4 +1,4 @@
-import React,{Suspense, lazy} from "react";
+import React,{Suspense, lazy, useEffect, useState, } from "react";
 import ReactDOM  from "react-dom/client";
 import Header from "./components/Header";
 import Body from "./components/Body";
@@ -7,18 +7,39 @@ import Footer from "./components/Footer";
 import Error from "./components/Error";
 import ReadMore from "./components/ReadMore";
 import RestaurentMenu from "./components/RestaurentMenu";
+import UserContext from "./utils/UserContext";
+import { Provider } from "react-redux";
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
+import appStore from "./utils/appStore";
 
 
 const About = lazy(()=>import("./components/About"));
 
 const AppLayout = ()=>{
+
+    const [userName, setUserName] = useState();
+
+    useEffect(()=>{
+
+        const data = {
+            name:"sai prakash reddy",
+        };
+
+        setUserName(data.name);
+
+    },[]);
+
+
     return(
+        <Provider store={appStore}>
+        <UserContext.Provider value={{loggedInUser: userName}}>
         <div className="app">
             <Header/>
             <Outlet/>
             <Footer/>
         </div>
+        </UserContext.Provider>
+        </Provider>
     );
 }
 

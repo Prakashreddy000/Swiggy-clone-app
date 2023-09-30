@@ -12,7 +12,9 @@ const About = () =>{
         
         <h2>Company History</h2>
         <p>Founded in 20XX, our company has steadily grown and evolved over the years. We have successfully served thousands of satisfied customers and look forward to continuing our journey of growth and success.</p>
+        <img src="file:///C:/Users/Prakash%20reddy/OneDrive/Pictures/luffy%20img.avif" alt="image"/>
         </div>
+        
     );
 };
 

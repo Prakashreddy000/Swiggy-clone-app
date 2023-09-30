@@ -65,19 +65,12 @@ if (OnlineStatus === false)
             }}
             >search</button>
           </div>
-
-           <div className="p-4 m-4 flex items-center">
-           <button className="px-4 py-2 bg-gray-100  hover:bg-red-400 rounded-lg" onClick={()=>{
-            const filteredList = ListOfRestro.filter(
-                (res)=>res.info.avgRating>4
-                );
-                setListOfRestro(filteredList);
-        }}
-        >top rated restro</button>
-            </div> 
-        
+            <div className="p-4 m-4 flex items-center">
+              <label>username : </label>
+              <input className="p-2 border border-black"/>
+            </div>
         </div> 
-
+        
 
         <div className="flex flex-wrap">
             {
